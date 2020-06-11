@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  height: 100vh;
+  background-image: url("./images/background-wheel.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.turnplate-border {
+  width: 80vw !important;
+  height: 80vw !important;
+}
+
+.turnplate-border .turnplate-wrapper {
+  width: 70vw !important;
+  height: 70vw !important;
+}
+
+.turnplate-border .turnplate-wrapper .turnplate {
+  width: 70vw !important;
+  height: 70vw !important;
+}
+
+.turnplate-border .turnplate-wrapper .turnplate-item div {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  transform-origin: 50% 35vw !important;
+}
+
+.confettiLeft {
+  position: relative;
+  /* right: 0; */
+  height: 10px;
+  background: antiquewhite;
+  width: 5px;
+  float: left;
+  top: -20vh
+}
+.confettiRight {
+  position: relative;
+  /* right: 0; */
+  height: 10px;
+  background: antiquewhite;
+  width: 5px;
+  float: right;
+  top: -20vh
+}
+
+.logo {
+  background-image: url('./images/918slot-logo.png');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  height: 80px;
+  width: 80px;
+  margin: 0 auto;
+}
+
+.btn {
+  width: "60%" !important;
+  margin: '0 auto' !important;
+  height: 40 !important;
+  margin-bottom: 10 !important;
+}
