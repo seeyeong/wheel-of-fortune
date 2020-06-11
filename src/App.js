@@ -53,6 +53,16 @@ const reward_list = [
   { icon: pecan, name: "200", id: 3 },
   { icon: pudding, name: "100", id: 4 },
   { icon: starwberry, name: "0", id: 5 },
+  { icon: avocado, name: "100", id: 1 },
+  { icon: doughnut, name: "300", id: 2 },
+  { icon: pecan, name: "200", id: 3 },
+  { icon: pudding, name: "100", id: 4 },
+  { icon: starwberry, name: "0", id: 5 },
+  { icon: avocado, name: "100", id: 1 },
+  { icon: doughnut, name: "300", id: 2 },
+  { icon: pecan, name: "200", id: 3 },
+  { icon: pudding, name: "100", id: 4 },
+  { icon: starwberry, name: "0", id: 5 },
 ];
 
 class App extends Component {
@@ -86,12 +96,17 @@ class App extends Component {
   rotateFinish = () => {
     console.log("rotate finish");
     const { winningText, isCopied } = this.state;
+
+    this.setState({
+      win: true
+    })
+
     let promoteCode = this.getRandomCode(10);
     Swal.fire({
       type: "info",
       title: "Please copy the code",
       html:
-        '<div id="container"><h4 id="promoteCode">' +
+        '<div id="containerSwal"><h4 id="promoteCode">' +
         promoteCode +
         '<i class="far fa-copy clickable" style="margin-left: 10px;"></i></h4></div> ' +
         "Click to redeem your topup bonus 😊",
@@ -107,7 +122,7 @@ class App extends Component {
         );
       }
     });
-    document.querySelector("#container").addEventListener("click", () => {
+    document.querySelector("#containerSwal").addEventListener("click", () => {
       Swal.update({ type: "success" });
       this.copyToClipboard(promoteCode);
       this.state.isCopied = true;
@@ -214,6 +229,7 @@ class App extends Component {
               download required to play the games.
             </h6>
           </div>
+        
         </div>
         <Confetti className="confettiLeft" active={win} config={configLeft} />
         <Confetti className="confettiRight" active={win} config={configLeft} />

@@ -70,22 +70,24 @@
 }
 
 .confettiLeft {
-  position: relative;
+  position: absolute;
   /* right: 0; */
   height: 10px;
   background: antiquewhite;
   width: 5px;
   float: left;
-  top: -20vh
+  top: -20vh;
+  z-index: 9998;
 }
 .confettiRight {
-  position: relative;
+  position: absolute;
   /* right: 0; */
   height: 10px;
   background: antiquewhite;
   width: 5px;
-  float: right;
-  top: -20vh
+  right: -99vw;
+  top: -20vh;
+  z-index: 9999;
 }
 
 .logo {
